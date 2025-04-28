@@ -1,0 +1,292 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inclusive Sans', sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  line-height: 1.6;
+}
+
+
+/* Hero Section */
+.hero {
+  background: url('/img/Landscape/Alt\ Everything\ 3.jpg') no-repeat center center/cover;
+  height: 80vh;
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(255, 255, 255, 0.6);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  color: #337997;
+  text-transform: uppercase;
+}
+
+/* Intro Section */
+.intro {
+  background-color: #d97a26;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.intro .container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.intro p {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+/* Feature Image Break */
+.feature-image {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Game Grid */
+.game-grid {
+  background-color: #ffffff;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.game-grid h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #337997;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.game-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(51, 121, 151, 0.5);
+}
+
+.game-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.game-card img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-text h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #85afc1;
+}
+
+.game-card:hover .card-text{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Feature Split Section */
+.feature-split {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 60vh;
+}
+
+.split-image {
+  flex: 1 1 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.split-text {
+  flex: 1 1 50%;
+  background-color: #d97a26;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.split-text p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #85afc1;
+}
+
+/* Button Style Example (for future buttons) */
+.button {
+  background-color: #4f91c3;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #407aa6;
+}
+
+/* Nav Bar */
+.navbar {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-family: 'Inclusive Sans', sans-serif;
+  font-size: 1.8rem;
+  color: #d97a26;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Inclusive Sans', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #337993; /* A lighter tone for hover effect */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Carousel Styling */
+.carousel {
+  position: relative;
+  width: 100%;
+  /* max-width: 800px; */
+  max-height: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
